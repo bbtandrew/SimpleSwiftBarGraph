@@ -67,7 +67,7 @@ class BarGraphView: UIView {
         bezier.addLineToPoint(CGPointMake(xstart+xaxis,ystart+yaxis))
         // Draw value markings on y-axis
         let divisor = CGFloat((yaxis-gridOffSetY)/maxY) // max y-value, with offset
-        for i in 0..<7 {
+        for i in 0..<maxY {
             bezier.moveToPoint(CGPointMake(xstart-CGFloat(2.5),ystart+gridOffSetY+CGFloat(i)*divisor))
             bezier.addLineToPoint(CGPointMake(xstart,ystart+gridOffSetY+CGFloat(i)*divisor))
         }
